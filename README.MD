@@ -58,3 +58,25 @@ Install tensorflow-datasets to access local or online datasets:
 | austin_sailor_dataset           | image | 128*128 |       | ![image](./example/33_austin_sailor_dataset_converted_externally_to_rlds.gif)|
 | utaustin_mutex                  | image | 128*128 |       | ![image](./example/34_utaustin_mutex.gif)|
 | stanford_kuka_multimodal        | image | 128*128 |       | ![image](./example/35_stanford_kuka_multimodal_dataset_converted_externally_to_rlds.gif)|
+
+
+## Labeling criteria
+![image](./example/7_cmu_franka_exploration_dataset_converted_externally_to_rlds.gif)
+```json
+{
+ //label out all objects that contact the agent, and have direct connection with the touched objects.
+objects' : [ 'sink', knife, 'pot', 'stove', 'oven', 'faucet'], 
+ // All one-one connection between 'objects'
+'relations' : [ 'stove on the oven', 'pot on the stove', 'pot hanging on the wall', 'knife hanging on the wall'], 
+ // indoor/outdoor envs
+environment':['indoor', 'kitchen'],
+// agent type with actuator types (3-figures, 5-figures)
+'agent_type' : ['arm', 'gripper'], 
+// vision, lidar, vicon, …
+'observation' : ['vision'], 
+// first eye view, third eye view, …	
+'view': 'third_eye_view',  
+// describe the task in detail by steps
+'task': ['reach the knife', 'lift the knife']
+}
+```
