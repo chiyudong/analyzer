@@ -1,6 +1,17 @@
 # Analyze RTX dataset
   
+## Pre-requisition
 
+Install Tensorflow:
+ `pip install tensorflow==2.17.0`
+
+Install open3d for pointcloud processing:
+ `pip install open3d==0.18.0`
+
+Install tensorflow-datasets to access local or online datasets
+`pip install tensorflow-datasets==4.9.6`
+
+## Datasets in details
 |dataset name |feature | size | in use | image |
 |-|-|-|:-:|-|
 | nyu_rot_dataset                 | image | 84*84   |     | ![image](./example/0_nyu_rot_dataset_converted_externally_to_rlds.gif)|
