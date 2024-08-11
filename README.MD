@@ -1,15 +1,27 @@
 # Analyze RTX dataset
   
-## Pre-requisition
+## Pre-requisitions
 
+### Setup with conda (**Recommanded** :+1: )
+
+`conda env create -f environment.yml -n myenv`
+
+
+### Manually Setup (**Not Recommanded**, skip if use conda)
 Install Tensorflow:
- `pip install tensorflow==2.17.0`
+
+ `pip install --force-reinstall -v "tensorflow==2.17.0"`
 
 Install open3d for pointcloud processing:
- `pip install open3d==0.18.0`
 
-Install tensorflow-datasets to access local or online datasets
-`pip install tensorflow-datasets==4.9.6`
+ `pip install --force-reinstall -v "open3d==0.18.0"`
+
+Install tensorflow-datasets to access local or online datasets:
+
+`pip install --force-reinstall -v "tensorflow-datasets==4.9.6"`
+
+## Investigate a certain dataset
+`$python feature_fetcher.py`
 
 ## Datasets in details
 |dataset name |feature | size | in use | image |
